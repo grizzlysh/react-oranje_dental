@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+// import logo from '/logo.svg';
+import logo from '~/assets/images/logo.svg'
+import '~/App.css';
+import ResponsiveAppBar from '~/navbar.component'
+import { Box, Container } from '@mui/material';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ResponsiveAppBar 
+        menus={['Products', 'Pricing', 'Blog']}
+      />
+      <Container  maxWidth="sm">
+        <Box sx={{ bgcolor: 'pink', height: '100vh' }} />
+      </Container>
+      <Container  maxWidth="sm">
+        <Box sx={{ bgcolor: 'blue', height: '100vh' }} />
+      </Container>
+      <Container  maxWidth="sm">
+        <Box sx={{ bgcolor: 'red', height: '100vh' }} />
+      </Container>
+
     </div>
   );
 }
