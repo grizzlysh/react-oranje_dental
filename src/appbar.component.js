@@ -13,7 +13,7 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 
-const ResponsiveAppBar = ({ menus }) => {
+const AppBarComponent = ({ menus }) => {
   const [anchorElNav, setAnchorElNav] = useState(null);
 
   const handleOpenNavMenu = (event) => {
@@ -30,7 +30,7 @@ const ResponsiveAppBar = ({ menus }) => {
       <Box 
       py     = {1}
       zIndex = {2}
-      my     = {5}
+      my     = {2}
       mx     = {5}
       sx     = {{position: 'relative'}}>
       <AppBar
@@ -135,4 +135,4 @@ const ResponsiveAppBar = ({ menus }) => {
     </>
   );
 };
-export default ResponsiveAppBar;
+export default AppBarComponent;
