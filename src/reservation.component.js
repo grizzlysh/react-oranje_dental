@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useForm } from "react-hook-form";
-import { Box, Button } from '@mui/material';
+import { Box, Button, Typography } from '@mui/material';
 
 import ReservationFormComponent from '~/reservation-form.component';
 import { Container } from '@mui/system';
@@ -30,10 +30,14 @@ const ReservationComponent = () => {
           alignItems     = {"center"}
           justifyContent = {"center"}
         >
+          {/* <Button size="large" variant="contained" sx={{mb:5, bgcolor: '#3D3B8E'}} disabled>RESERVATION</Button> */}
+          <Typography mb={5} color={'#3D3B8E'} variant="h4" component="div">
+              <b>reservation</b>
+          </Typography>
           <ReservationFormComponent control={control} />
           <Container style={{padding: 0}}>
-            <Box m={2}>
-              <Button variant="contained" fullWidth type="submit">Submit</Button>
+            <Box mt={1}>
+              <Button size="medium" variant="contained" fullWidth type="submit">Submit</Button>
             </Box>
           </Container>
         </Box>

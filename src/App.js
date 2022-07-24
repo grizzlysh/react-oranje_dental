@@ -18,8 +18,16 @@ function App() {
           sx = {{
             position               : "relative",
             zIndex                 : 2,
-            borderBottomRightRadius: 200,
-            borderBottomLeftRadius : 200,
+            borderBottomRightRadius: {
+              xs: 80,
+              sm: 100,
+              md: 200
+            },
+            borderBottomLeftRadius : {
+              xs: 80,
+              sm: 100,
+              md: 200
+            },
             bgcolor                : '#E072A4',
             height                 : '100vh',
           }} />
@@ -27,7 +35,7 @@ function App() {
       <Container  maxWidth="lg">
         <Box
           mt         = {-25}
-          pt         = {35}
+          pt         = {5}
           px         = {10}
           alignItems = "center"
           sx         = {{
@@ -36,28 +44,22 @@ function App() {
             justifyContent         : 'center',
             position               : 'relative',
             zIndex                 : 1,
-            borderBottomRightRadius: 200,
-            borderBottomLeftRadius : 200,
+            borderBottomRightRadius: {
+              xs: 80,
+              sm: 100,
+              md: 200
+            },
+            borderBottomLeftRadius : {
+              xs: 80,
+              sm: 100,
+              md: 200
+            },
             // opacity                : '50%',
             bgcolor                : '#FABC2A',
             width                  : 'auto',
             height                 : '100vh',
           }}>
-            <Grid
-              container
-              alignItems     = "center"
-              justifyContent = "center"
-              direction      = {"column"}
-              // p              = {0}
-            > 
-              {/* <Grid item xs={12} sm={12} md={12} lg={12} xl={12}> */}
-              <Grid item>
-                <Button variant="contained" sx={{bgcolor: '#3D3B8E'}} >RESERVATION</Button>
-              </Grid>
-              <Grid item>
-                <ReservationComponent />
-              </Grid>
-            </Grid>
+            <ReservationComponent />
           </Box>
       </Container>
       <Container  maxWidth="lg">
