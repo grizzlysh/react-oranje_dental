@@ -2,17 +2,26 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from '~/reportWebVitals';
 import { QueryClient, QueryClientProvider } from "react-query";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
 
 import '~/index.css';
-import App from '~/app';
+import App from '~/App';
 
 const root        = ReactDOM.createRoot(document.getElementById('root'));
 const queryClient = new QueryClient();
 
+const theme = createTheme({
+  typography: {
+    fontFamily: 'sans-serif',
+  }
+});
+
 root.render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
-      <App />
+      <ThemeProvider theme={theme}> 
+        <App />
+      </ThemeProvider>
     </QueryClientProvider>
   </React.StrictMode>
 );
