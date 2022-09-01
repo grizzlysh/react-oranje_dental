@@ -1,6 +1,6 @@
 // import logo from '/logo.svg';
 import logo from '~/assets/images/od-inner.jpeg'
-import { Box, Container, Button, Grid, Divider } from '@mui/material';
+import { Box, Container, Button, Grid, Divider, Typography } from '@mui/material';
 import '~/App.css';
 
 import AppBarComponent from '~/appbar.component';
@@ -15,10 +15,11 @@ function App() {
       <AppBarComponent 
         menus={['Products', 'Pricing', 'Blog']}
       />
-      <Container  maxWidth="lg">
+      <Container maxWidth="xl">
         <Box
           mt = {-25}
           pt = {30}
+          pb = {10}
           sx = {{
             position               : "relative",
             zIndex                 : 2,
@@ -33,7 +34,7 @@ function App() {
               md: 200
             },
             bgcolor                : '#E072A4',
-            height                 : '100vh',
+            minHeight              : '100vh',
           }}
         >
           <Grid container item xs={12} lg={9} sx={{ mx: "auto" }}>
@@ -64,12 +65,69 @@ function App() {
               />
             </Grid>
           </Grid>
-          <Box>
-            <img src={logo} width="30%"/>
+          {/* //TODO: change to box to container to adjust display */}
+          <Box
+            mt         = {5}
+            alignItems = "center"
+            sx         = {{
+              display       : 'flex',
+              flexDirection : 'row',
+              justifyContent: 'center',
+            }}
+          >
+            <Box
+              component    = "img"
+              src          = {logo}
+              width        = {"30%"}
+              p            = {1.2}
+              ml           = {25}
+              mr           = {2}
+              bgcolor      = {"#FFFFFF"}
+              borderRadius = {5}
+            />
+            <Box
+              // alignItems = "center"
+              ml = {2}
+              mr = {25}
+              px = {1}
+              sx = {{
+                display       : 'flex',
+                flexDirection : 'column',
+                justifyContent: 'center',
+              }}
+            >
+              <Typography variant="h4" mt={2} mb={1} align="left">
+                <b>YEAHH</b>
+              </Typography>
+              <Typography variant="h6" color="text" align="justify">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </Typography>
+            </Box>
+          </Box>
+          <Box
+            mt         = {5}
+            alignItems = "center"
+            sx         = {{
+              display       : 'flex',
+              flexDirection : 'column',
+              justifyContent: 'center',
+            }}
+          >
+            <Box
+              component    = "img"
+              src          = {logo}
+              // width        = {"30%"}
+              p            = {1.2}
+              ml           = {25}
+              mr           = {2}
+              bgcolor      = {"#FFFFFF"}
+              borderRadius = {5}
+              width        = "15%"
+            />
           </Box>
         </Box>
       </Container>
-      <Container  maxWidth="lg">
+      <Container maxWidth="xl">
         <Box
           mt         = {-25}
           pt         = {5}
@@ -99,7 +157,7 @@ function App() {
             <ReservationFormSection />
           </Box>
       </Container>
-      <Container  maxWidth="lg">
+      <Container maxWidth="xl">
         <Box 
           mt         = {-25}
           py         = {25}
@@ -122,7 +180,7 @@ function App() {
           <ReservationListSection api={apiClient}/>
         </Box>
       </Container>
-      <Container  maxWidth="lg">
+      <Container maxWidth="xl">
         <Box sx={{ bgcolor: 'red', height: '100vh' }} />
       </Container>
 
